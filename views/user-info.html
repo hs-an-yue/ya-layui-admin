@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>用户设置</title>
+    <link href="../layui/css/layui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .user-base{
+            width: 100%;
+            background-color: #fff;
+        }
+        .user-base>div{
+            width: 100%;
+        }
+        .user-base>hr{
+            width: 100%;
+        }
+        .user-info{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .user-info>img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            border: 1px solid #eeeeee;
+            margin-top: 20px;
+        }
+        .user-info>p{
+            margin-top: 15px;
+        }
+        .user-info-list>img{
+            height: 100px;
+            width: 100px;
+            border-radius: 50px;
+            border: 1px solid #eeeeee;
+            margin: 20px 0;
+        }
+        .user-info-list{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .user-info-detail{
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+        }
+        .user-info-detail-item{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            height: 30px;
+        }
+        .user-info-detail-item>p{
+            font-size: 14px;
+        }
+        .layui-tabs-header .layui-this, .layui-tabs-header li:hover{
+            color: #16b777;
+        }
+        .layui-tabs-header .layui-this:after{
+            border-bottom: 3px solid #16b777;
+        }
+        .layui-tabs-body{
+            display: flex;
+            justify-content: center;
+        }
+        .layui-tabs-item{
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+<div class="layui-fluid">
+    <div class="ya-container">
+        <div class="layui-row layui-col-space20">
+            <div class="layui-col-md3 card-hover">
+                <div class="user-base user-info">
+                    <div style="margin: 10px 0 0 10px">
+                        <h4>个人信息</h4>
+                    </div>
+                    <hr>
+                    <div class="user-info-list">
+                        <img src="../img/avatar.gif" alt="avatar">
+                        <div class="user-info-detail">
+                            <hr>
+                            <!--用户账号-->
+                            <div class="user-info-detail-item">
+                                <p>用户账号</p>
+                                <p>19999999901</p>
+                            </div>
+                            <hr>
+                            <!--用户邮箱-->
+                            <div class="user-info-detail-item">
+                                <p>用户邮箱</p>
+                                <p>1999999991@126.com</p>
+                            </div>
+                            <hr>
+                            <!--用户名称-->
+                            <div class="user-info-detail-item">
+                                <p>用户名称</p>
+                                <p>皮卡丘</p>
+                            </div>
+                            <hr>
+                            <!-- 用户昵称 -->
+                            <div class="user-info-detail-item">
+                                <p>用户昵称</p>
+                                <p>大呲花</p>
+                            </div>
+                            <hr>
+                            <!-- 用户性别 -->
+                            <div class="user-info-detail-item">
+                                <p>用户性别</p>
+                                <p>保密</p>
+                            </div>
+                            <hr>
+                            <!--用户部门-->
+                            <div class="user-info-detail-item">
+                                <p>用户部门</p>
+                                <p>人事部</p>
+                            </div>
+                            <hr>
+                            <!--用户角色-->
+                            <div class="user-info-detail-item">
+                                <p>用户角色</p>
+                                <p>运营</p>
+                            </div>
+                            <hr>
+                            <!--创建时间-->
+                            <div class="user-info-detail-item">
+                                <p>创建时间</p>
+                                <p>2025-11-18 16:00:48</p>
+                            </div>
+                            <hr>
+                            <!--更新时间-->
+                            <div class="user-info-detail-item">
+                                <p>更新时间</p>
+                                <p>2025-11-18 16:00:48</p>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md9 card-hover">
+                <div class="user-base layui-panel">
+                    <!--标题-->
+                    <div style="margin: 10px 0 0 10px">
+                        <h4 style="color:#000000D9;">基本信息</h4>
+                    </div>
+                    <hr>
+                    <div class="user-edit-info">
+                        <!-- 表单提交区 -->
+                        <div class="layui-tabs layui-hide-v" id="demoTabs1">
+                            <ul class="layui-tabs-header">
+                                <li lay-id="aaa" lay-closable="false">基本信息</li>
+                                <li lay-id="bbb">密码修改</li>
+                            </ul>
+                            <div class="layui-tabs-body">
+                                <div class="layui-tabs-item">
+                                    <form class="layui-form">
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">用户账号</label>
+                                            <div class="layui-input-block">
+                                                <input type="text"  autocomplete="off" disabled  placeholder="账号" class="layui-input">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">用户邮箱</label>
+                                            <div class="layui-input-block">
+                                                <input type="text"  autocomplete="off" lay-affix="clear" placeholder="邮箱" class="layui-input">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">用户名称</label>
+                                            <div class="layui-input-block">
+                                                <input type="text"  autocomplete="off" lay-affix="clear" placeholder="名称" class="layui-input">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">用户昵称</label>
+                                            <div class="layui-input-block">
+                                                <input type="text"  autocomplete="off" lay-affix="clear" placeholder="昵称" class="layui-input">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">用户性别</label>
+                                            <div class="layui-input-block">
+                                                <select>
+                                                    <option value="">请选择</option>
+                                                    <option value="1">男</option>
+                                                    <option value="0">女</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">用户部门</label>
+                                            <div class="layui-input-block">
+                                                <select>
+                                                    <option value="">请选择</option>
+                                                    <option value="1001">人事部</option>
+                                                    <option value="1002">行政部</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">用户角色</label>
+                                            <div class="layui-input-block">
+                                                <select>
+                                                    <option value="">请选择</option>
+                                                    <option value="1">超级管理员</option>
+                                                    <option value="2">运营</option>
+                                                    <option value="3">普通</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item" style="display: flex;justify-content: center;">
+                                            <button class="layui-btn">修改</button>
+                                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="layui-tabs-item">
+                                    <form class="layui-form">
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">原密码</label>
+                                            <div class="layui-input-block">
+                                                <input type="text"  autocomplete="off" placeholder="请输入原密码" lay-affix="clear" class="layui-input">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">新密码</label>
+                                            <div class="layui-input-block">
+                                                <input type="text"  autocomplete="off" placeholder="请输入新密码" lay-affix="clear" class="layui-input">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item">
+                                            <label class="layui-form-label">确认密码</label>
+                                            <div class="layui-input-block">
+                                                <input type="text"  autocomplete="off" placeholder="确认密码" lay-affix="clear" class="layui-input">
+                                            </div>
+                                        </div>
+                                        <div class="layui-form-item" style="display: flex;justify-content: center;">
+                                            <button class="layui-btn">修改</button>
+                                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../layui/layui.js"></script>
+<script>
+    layui.use(function(){
+        const $ = layui.$;
+        const tabs = layui.tabs;
+
+    });
+</script>
+</body>
+</html>

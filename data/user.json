@@ -1,0 +1,37 @@
+{
+  "code": 0,
+  "msg": "OK",
+  "count": 1000,
+  "data": [
+    {
+      "id": 10000,
+      "userName": "大月",
+      "avatar": "https://q6.itc.cn/q_70/images03/20250306/355fba6a5cb049f5b98c2ed9f03cc5e1.jpeg",
+      "cellphone": "10888888889",
+      "nickName": "月月",
+      "sex": 0,
+      "deptName":"总裁办",
+      "createTime": "2025-11-11 11:11:11"
+    },
+    {
+      "id": 10001,
+      "userName": "大安",
+      "avatar": "https://gips0.baidu.com/it/u=3281460890,4254483422&fm=3074&app=3074&f=PNG?w=2048&h=2048",
+      "cellphone": "10888888888",
+      "nickName": "安安",
+      "sex": 0,
+      "deptName":"人事部",
+      "createTime": "2025-11-11 11:11:11"
+    },
+    {
+      "id": 10000,
+      "userName": "月安",
+      "avatar": "https://q8.itc.cn/q_70/images03/20250114/d9d8d1106f454c2b83ea395927bfc020.jpeg",
+      "cellphone": "10888888887",
+      "nickName": "大呲花",
+      "sex": 1,
+      "deptName":"行政部",
+      "createTime": "2025-11-11 11:11:11"
+    }
+  ]
+}

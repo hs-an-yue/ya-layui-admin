@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>仪表盘</title>
+    <link href="../layui/css/layui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .layui-panel{
+            border-radius: 5px;
+            height: 170px;
+        }
+        .echarts-show{
+            background-color: #fff;
+            border-radius: 5px;
+            height: 500px;
+        }
+        .ya-statistics{
+            width: 85%;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .ya-statistics-top{
+            height: 100px;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+        .ya-statistics-bottom{
+            height: 70px;
+        }
+        .ya-statistics-data{
+            height: 80px;
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+        .ya-statistics-data>div{
+            height: 100%;
+        }
+        .ya-statistics-data-left{
+            width: 70%;
+        }
+        .ya-statistics-data-right{
+            width: 30%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-end;
+        }
+        .ya-statistics-data-right>img{
+            height: 28px;
+            width: 28px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 容器 -->
+    <div class="layui-fluid">
+        <div class="ya-container">
+            <!-- 数据统计 -->
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md3 card-hover">
+                    <div class="layui-panel">
+                        <div class="ya-statistics">
+                            <!--第一层-->
+                            <div class="ya-statistics-top">
+                                <div class="ya-statistics-data">
+                                    <div class="ya-statistics-data-left">
+                                        <p style="color: #6b7280;">用户量</p>
+                                        <p style="color: #1f2937;font-size: 35px;font-weight: bold;margin-top: 10px;">12,845</p>
+                                    </div>
+                                    <div class="ya-statistics-data-right">
+                                        <img src="../img/statistics-user.png" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--第二层-->
+                            <div class="ya-statistics-bottom">
+                                <p style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;align-items: center;height: 100%;">
+                                    <svg x="1763714367508" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                                        <path d="M542.08 429.44V672a32 32 0 0 1-64 0v-242.56l-105.28 105.28a32 32 0 0 1-45.12-45.12l156.8-156.8a31.936 31.936 0 0 1 49.92-1.6l158.4 158.4a32 32 0 0 1-45.44 45.12l-105.28-105.28z" fill="#16B777" ></path>
+                                    </svg>
+                                    <span style="font-size: 12px;color: #16B777;">12.5%</span><span style="font-size: 12px;color: #9ca3af;margin-left: 10px;">较上月</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md3 card-hover">
+                    <div class="layui-panel">
+                        <div class="ya-statistics">
+                            <!--第一层-->
+                            <div class="ya-statistics-top">
+                                <div class="ya-statistics-data">
+                                    <div class="ya-statistics-data-left">
+                                        <p style="color: #6b7280;">下载量</p>
+                                        <p style="color: #1f2937;font-size: 35px;font-weight: bold;margin-top: 10px;">1,845</p>
+                                    </div>
+                                    <div class="ya-statistics-data-right">
+                                        <img src="../img/statistics-download.png" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--第二层-->
+                            <div class="ya-statistics-bottom">
+                                <p style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;align-items: center;height: 100%;">
+                                    <svg x="1763715103778" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" id="mx_n_1763715103779" width="28" height="28">
+                                        <path d="M478.4 595.2V352a32 32 0 1 1 64 0v242.56l104.96-104.96a32 32 0 1 1 45.12 45.12l-156.48 156.48a31.936 31.936 0 0 1-25.6 12.8 32 32 0 0 1-22.72-9.28l-160-160a32 32 0 0 1 45.12-45.12l105.6 105.6z" fill="#ef4444"></path>
+                                    </svg>
+                                    <span style="font-size: 12px;color: #ef4444;">10.5%</span><span style="font-size: 12px;color: #9ca3af;margin-left: 10px;">较上月</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md3 card-hover">
+                    <div class="layui-panel">
+                        <div class="ya-statistics">
+                            <!--第一层-->
+                            <div class="ya-statistics-top">
+                                <div class="ya-statistics-data">
+                                    <div class="ya-statistics-data-left">
+                                        <p style="color: #6b7280;">访问量</p>
+                                        <p style="color: #1f2937;font-size: 35px;font-weight: bold;margin-top: 10px;">120,845</p>
+                                    </div>
+                                    <div class="ya-statistics-data-right">
+                                        <img src="../img/statistics-report.png" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--第二层-->
+                            <div class="ya-statistics-bottom">
+                                <p style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;align-items: center;height: 100%;">
+                                    <svg x="1763714367508" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+                                        <path d="M542.08 429.44V672a32 32 0 0 1-64 0v-242.56l-105.28 105.28a32 32 0 0 1-45.12-45.12l156.8-156.8a31.936 31.936 0 0 1 49.92-1.6l158.4 158.4a32 32 0 0 1-45.44 45.12l-105.28-105.28z" fill="#16B777" ></path>
+                                    </svg>
+                                    <span style="font-size: 12px;color: #16B777;">12.5%</span><span style="font-size: 12px;color: #9ca3af;margin-left: 10px;">较上月</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-md3 card-hover">
+                    <div class="layui-panel">
+                        <div class="ya-statistics">
+                            <!--第一层-->
+                            <div class="ya-statistics-top">
+                                <div class="ya-statistics-data">
+                                    <div class="ya-statistics-data-left">
+                                        <p style="color: #6b7280;">使用量</p>
+                                        <p style="color: #1f2937;font-size: 35px;font-weight: bold;margin-top: 10px;">2,845</p>
+                                    </div>
+                                    <div class="ya-statistics-data-right">
+                                        <img src="../img/statistics-system.png" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <!--第二层-->
+                            <div class="ya-statistics-bottom">
+                                <p style="display: flex;flex-direction: row;flex-wrap: nowrap;justify-content: flex-start;align-items: center;height: 100%;">
+                                    <svg x="1763715103778" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" id="mx_n_1763715103779" width="28" height="28">
+                                        <path d="M478.4 595.2V352a32 32 0 1 1 64 0v242.56l104.96-104.96a32 32 0 1 1 45.12 45.12l-156.48 156.48a31.936 31.936 0 0 1-25.6 12.8 32 32 0 0 1-22.72-9.28l-160-160a32 32 0 0 1 45.12-45.12l105.6 105.6z" fill="#ef4444"></path>
+                                    </svg>
+                                    <span style="font-size: 12px;color: #ef4444;">12.5%</span><span style="font-size: 12px;color: #9ca3af;margin-left: 10px;">较上月</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 图标统计-1 100%宽度-->
+            <div class="layui-row layui-col-space15">
+                <div class="layui-col-md9">
+                    <!-- 统计图1 -->
+                    <div id="echartsId1" class="echarts-show card-hover"></div>
+                </div>
+                <div class="layui-col-md3">
+                    <!-- 时间轴 -->
+                    <div class="echarts-show card-hover">
+                        <h3 style="text-align: center;padding-top: 10px;">最新动态</h3>
+                        <div class="layui-timeline" style="margin-left: 10px;padding-top: 20px;">
+                            <div class="layui-timeline-item">
+                                <i class="layui-icon layui-timeline-axis"></i>
+                                <div class="layui-timeline-content">
+                                    <h3 class="layui-timeline-title">2025-11-24</h3>
+                                    <p style="color: #5f5f5f">
+                                        Ya-Layui-Admin v1.0 版本 <br/>
+										<span style="font-size: 12px;color: #9ca3af;">
+											模板核心框架完成
+										</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="layui-timeline-item">
+                                <i class="layui-icon layui-timeline-axis"></i>
+                                <div class="layui-timeline-content">
+                                    <h3 class="layui-timeline-title">2025-11-25</h3>
+                                    <p style="color: #5f5f5f">
+                                        Ya-Layui-Admin v1.1 版本 <br/>
+                                        <span style="font-size: 12px;color: #9ca3af;">
+											模板核心页面样式完成
+										</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="layui-timeline-item">
+                                <i class="layui-icon layui-anim layui-anim-rotate layui-anim-loop layui-timeline-axis"></i>
+                                <div class="layui-timeline-content layui-text">
+                                    <div class="layui-timeline-title" style="color: #16b777;">开发中</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../layui/layui.js"></script>
+    <script src="../js/echarts6.0.0.js"></script>
+    <script>
+        layui.use(function (){
+
+            //创建报表对象1
+            const echarts_id_1 = echarts.init(document.getElementById('echartsId1'));
+            let option_1 = {
+                title: {
+                    text: '访问流量曲线'
+                },
+                xAxis: {
+                    type: 'category',
+                    data: ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六']
+                },
+                yAxis: {
+                    type: 'value'
+                },
+                series: [
+                    {
+                        data: [10, 12, 91, 34, 64, 33, 132],
+                        type: 'line',
+                        smooth: true
+                    }
+                ]
+            };
+            echarts_id_1.setOption(option_1);
+        });
+    </script>
+</body>
+</html>

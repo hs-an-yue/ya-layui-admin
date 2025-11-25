@@ -1,0 +1,147 @@
+/* 整体布局 */
+.ya-container{
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	overflow: hidden;
+}
+/* 左侧导航 */
+.ya-left{
+	height: 100%;
+	width: 210px;
+	background-color: #fff;
+	overflow-y: auto;
+	z-index: 100;
+	transition: width 0.3s ease;
+}
+/*同时拥有这两个类，css配置生效*/
+.ya-left.ya-hidden {
+	width: 0;
+	padding: 0;
+	overflow: hidden;
+}
+/*右侧内容*/
+.ya-right{
+	flex: 1;/*自动计算*/
+	transition: width 0.3s ease;/*动画*/
+	height: 100%;
+	background-color: #f1f3f6;
+}
+/*顶部导航bar*/
+.ya-top-bar{
+	width: 100%;
+	height: 48px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #ebe6e7;
+}
+/*切换菜单+面包屑*/
+.ya-menu-bread{
+	height: 48px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+}
+/*菜单*/
+.ya-menu{
+	height: 48px;
+	width: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+/*面包屑*/
+.ya-bread{
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+/*layui默认样式覆盖*/
+.ya-top-user .layui-nav{
+	background-color: #fff;
+}
+.ya-top-user a{
+	color: #5f5f5f !important;
+}
+.ya-top-user .layui-nav-item{
+	line-height: 45px;
+}
+/*logo*/
+.ya-left-logo{
+	height: 48px;
+	background-color: #fff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	cursor: pointer;
+	justify-content: center;
+}
+.ya-logo-left{
+	height: 48px;
+	display: flex;
+	align-items: center;
+}
+.ya-logo-right{
+	height: 48px;
+	display: flex;
+	align-items: center;
+	color: #16B777;
+	font-size: 18px;
+	font-weight: 600;
+	margin-left: 10px;
+}
+.ya-sidebar-content{
+	overflow-x: hidden;
+	width: 100%;
+	height: calc(100vh - 48px);
+}
+/* 覆盖layui原菜单的高度 */
+.layui-menu li {
+	line-height: 36px !important;
+}
+.layui-tabs-header li{
+	line-height: 35px !important;
+}
+.layui-tabs-body{
+	padding: 0 !important;
+}
+.layui-tabs-bar .layui-icon{
+	font-size: 10px;
+	width: 25px;
+	height: 34px;
+	line-height: 34px;
+}
+.layui-tabs-scroll{
+	padding: 0 25px;
+}
+/* 标签css */
+.ya-top-nav{
+	height: 34px;
+	width: 100%;
+	background-color: #ffffff;
+	display: flex;
+}
+.nav-tabs{
+	flex: 1;
+}
+/*去掉标签选项卡选中底层下划线样式*/
+.layui-tabs-header .layui-this:after{
+	border-bottom:none;
+}
+.layui-tabs-header .layui-this, .layui-tabs-header li:hover{
+	color:#16B777;
+}
+/* 修改选项卡标签伪类样式修改 */
+.layui-tabs-header li .layui-tabs-close:hover{
+	background-color: #16B777;
+	color:#fff;
+}
+/*去掉layui默认菜单选中右侧的竖线*/
+.layui-menu .layui-menu-item-checked:after{
+	border-right: none;
+}

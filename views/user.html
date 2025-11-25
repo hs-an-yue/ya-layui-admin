@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>用户管理</title>
+    <link href="../layui/css/layui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .user-container{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+        }
+        .user-organization-menu{
+            width: 15%;
+            background-color: #FFFFFF;
+            height: 100vh;
+        }
+        .user-organization-body{
+            width: 84%;
+        }
+        .layui-tree-clicked-custom{
+            color: #16b777;
+        }
+        .organization-menu-title{
+            height: 40px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            border-bottom: 1px solid #eff0f1;
+        }
+        .organization-menu-title>img{
+            height: 20px;
+            width: 20px;
+            margin-left: 10px;
+        }
+        .organization-menu-title>p{
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        .organization-search-container{
+            height: 60px;
+            background-color: #ffffff;
+        }
+        .organization-search-form>.layui-form-item{
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .organization-search-label{
+            width: 38px;
+            color: #606266;
+            font-weight: bold;
+        }
+        .user-organization-body-table{
+            background-color: #FFFFFF;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="user-container">
+        <!--组织菜单-->
+        <div class="user-organization-menu">
+            <div class="organization-menu-title">
+                <img src="../img/organization.png" alt="logo">
+                <p>组织机构</p>
+            </div>
+            <!-- 菜单列表 -->
+            <div id="organization-menu-id"></div>
+        </div>
+        <!--用户列表-->
+        <div class="user-organization-body">
+            <!-- 用户条件搜索 -->
+            <div class="user-organization-body-search">
+                <div class="layui-row organization-search-container">
+                    <form class="layui-form organization-search-form">
+                        <div class="layui-form-item">
+                            <div class="layui-inline" style="display: flex;align-items: center;">
+                                <label class="layui-form-label organization-search-label">名称:</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="userName" placeholder="用户名称" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline" style="display: flex;align-items: center;">
+                                <label class="layui-form-label organization-search-label">手机:</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" name="cellphone" placeholder="手机号" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline" style="display: flex;align-items: center;">
+                                <label class="layui-form-label organization-search-label">状态:</label>
+                                <div class="layui-input-block" style="margin-left: 0;display: flex;align-items: center;">
+                                    <select name="interest">
+                                        <option value=""></option>
+                                        <option value="0">启用</option>
+                                        <option value="1">停用</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button type="button" style="background-color: #16b777;" class="layui-btn">
+                                    <i class="layui-icon layui-icon-search"></i>搜索
+                                </button>
+                                <button type="button" class="layui-btn layui-btn-primary">
+                                    <i class="layui-icon layui-icon-refresh"></i>重置
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- 用户列表 -->
+            <div class="user-organization-body-table">
+                <table class="layui-hide" id="ID-table-user"></table>
+            </div>
+        </div>
+    </div>
+    <script src="../layui/layui.js"></script>
+    <script>
+        layui.use(function(){
+            let tree = layui.tree;
+            let $ = layui.$;
+            let table = layui.table;
+
+            //测试组织架构接口
+            $.getJSON("../data/organizationTree.json",function (resp) {
+                // 渲染
+                tree.render({
+                    elem: '#organization-menu-id',
+                    data: resp.data,
+                    customName:{
+                        id: 'id',
+                        title: 'name',
+                        children: 'children'
+                    },
+                    showLine: false,
+                    click: function(obj){
+                        //将选中的样式全部移除
+                        $("#organization-menu-id").find(".layui-tree-clicked-custom").removeClass("layui-tree-clicked-custom");
+                        //给点击的菜单字体设置选中颜色
+                        $(obj.elem).find(".layui-tree-txt").first().addClass("layui-tree-clicked-custom");
+                    }
+                });
+
+            });
+
+            //测试用户
+            table.render({
+                elem: '#ID-table-user',
+                url: '../data/user.json',
+                cols: [[
+                    {field:'id', title: 'ID', sort: true, fixed: true},
+                    {field:'userName', title: '用户名', },
+                    {
+                        title: '头像',
+                        templet:function (data){
+                            return `<img style="height: 30px;width: 30px;border-radius: 15px;" src="${data.avatar}" alt="avatar">`;
+                        }
+                    },
+                    {field:'nickName', title: '用户别名'},
+                    {
+                        title: '性别',
+                        templet:function (data){
+                            return data.sex===1?'<span class="layui-badge layui-bg-blue">男</span>':'<span class="layui-badge layui-bg-orange">女</span>';
+                        }
+                    },
+                    {field:'deptName', title: '部门'},
+                    {field:'createTime', title: '创建时间'},
+                    {
+                        title: "操作",
+                        templet:function (){
+                            let str='<button type="button" class="layui-btn layui-bg-orange layui-btn-xs">更新</button>';
+                            str+='<button type="button" class="layui-btn layui-bg-red layui-btn-xs">删除</button>';
+                            return str;
+                        }
+                    }
+                ]],
+                page: true
+            });
+
+        })
+    </script>
+</body>
+</html>

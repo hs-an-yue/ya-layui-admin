@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>登录日志</title>
+    <link href="../layui/css/layui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .organization-search-container{
+            height: 60px;
+            background-color: #ffffff;
+        }
+        .organization-search-form>.layui-form-item{
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .organization-search-label{
+            width: 35px;
+            color: #606266;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="layui-fluid">
+        <div class="ya-container">
+            <div class="layui-row organization-search-container">
+                <form class="layui-form organization-search-form">
+                    <div class="layui-form-item">
+                        <div class="layui-inline" style="display: flex;align-items: center;">
+                            <label class="layui-form-label organization-search-label">名称:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="userName" placeholder="名称" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline" style="display: flex;align-items: center;">
+                            <label class="layui-form-label organization-search-label">手机:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="cellphone" placeholder="手机" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <button type="button" style="background-color: #16b777;" class="layui-btn">
+                                <i class="layui-icon layui-icon-search"></i>搜索
+                            </button>
+                            <button type="button" class="layui-btn layui-btn-primary">
+                                <i class="layui-icon layui-icon-refresh"></i>重置
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="layui-row" style="margin-top: 15px;background-color: #ffffff;">
+                <table class="layui-hide" id="ID-table-user-log"></table>
+            </div>
+        </div>
+    </div>
+    <script src="../layui/layui.js"></script>
+    <script>
+        layui.use(function (){
+            let table = layui.table;
+            table.render({
+                elem: '#ID-table-user-log',
+                url: '../data/login-user-log.json',
+                cols: [[
+                    {title:"序号",type:"numbers" ,fixed: true},
+                    {field:'loginName', title: '用户', },
+                    {field:'cellphone', title: '手机', },
+                    {field:'deptName', title: '部门'},
+                    {field:'ipaddr', title: 'IP'},
+                    {field:'loginLocation', title: '地址'},
+                    {field:'browser', title: '浏览器'},
+                    {field:'os', title: '操作系统'},
+                    {field:'startTimestamp', title: '登录时间'}
+                ]],
+                page: true
+            });
+        });
+    </script>
+</body>
+</html>

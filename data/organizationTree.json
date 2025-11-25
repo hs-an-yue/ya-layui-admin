@@ -1,0 +1,102 @@
+{
+  "code": 0,
+  "count": 1000,
+  "data": [
+    {
+      "id": 1,
+      "name": "大月科技总公司",
+      "no": 2001,
+      "status": 1,
+      "score": 28,
+      "description": "描述",
+      "createTime": "2014-06-04 12:29:55",
+      "parentId": null,
+      "children": [
+        {
+          "id": 2,
+          "name": "大月科技南京分公司",
+          "no": 2001,
+          "status": 1,
+          "score": 28,
+          "description": "描述",
+          "createTime": "2014-06-04 12:29:55",
+          "parentId": null,
+          "children": [
+            {
+              "id": 3,
+              "name": "人事部",
+              "no": 2001,
+              "status": 1,
+              "score": 28,
+              "description": "描述",
+              "createTime": "2014-06-04 12:29:55",
+              "parentId": null,
+              "isParent": false
+            },
+            {
+              "id": 7,
+              "name": "行政部",
+              "no": 2001,
+              "status": 1,
+              "score": 28,
+              "description": "描述",
+              "createTime": "2014-06-04 12:29:55",
+              "parentId": null,
+              "isParent": false
+            }
+          ],
+          "isParent": true
+        }
+      ],
+      "isParent": true
+    },
+    {
+      "id": 8,
+      "name": "大安科技总公司",
+      "no": 2002,
+      "status": 1,
+      "score": 28,
+      "description": "描述",
+      "createTime": "2014-06-04 12:29:55",
+      "parentId": null,
+      "children": [
+        {
+          "id": 2,
+          "name": "大安科技南京分公司",
+          "no": 2001,
+          "status": 1,
+          "score": 28,
+          "description": "描述",
+          "createTime": "2014-06-04 12:29:55",
+          "parentId": null,
+          "children": [
+            {
+              "id": 3,
+              "name": "人事部",
+              "no": 2001,
+              "status": 1,
+              "score": 28,
+              "description": "描述",
+              "createTime": "2014-06-04 12:29:55",
+              "parentId": null,
+              "isParent": false
+            },
+            {
+              "id": 7,
+              "name": "行政部",
+              "no": 2001,
+              "status": 1,
+              "score": 28,
+              "description": "描述",
+              "createTime": "2014-06-04 12:29:55",
+              "parentId": null,
+              "isParent": false
+            }
+          ],
+          "isParent": true
+        }
+      ],
+      "isParent": true
+    }
+  ]
+}

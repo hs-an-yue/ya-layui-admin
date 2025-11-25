@@ -1,0 +1,72 @@
+{
+  "count": 104,
+  "data": [
+    {
+      "modelName": "菜单管理",
+      "requestUrl": "/menu/add",
+      "cellphone":"19999999999",
+      "operName": "admin",
+      "ipaddr": "175.2.81.212",
+      "operLocation": "湖南省 娄底市",
+      "browser": "Chrome 13",
+      "os": "Windows 10",
+      "createTime": "2025-11-24 11:03:59",
+      "costTime": 2000,
+      "method": "POST"
+    },
+    {
+      "modelName": "用户管理",
+      "requestUrl": "/user/add",
+      "cellphone":"19999999999",
+      "operName": "admin",
+      "ipaddr": "175.2.81.212",
+      "operLocation": "湖南省 娄底市",
+      "browser": "Chrome 13",
+      "os": "Windows 10",
+      "createTime": "2025-11-24 11:03:59",
+      "costTime": 2010,
+      "method": "POST"
+    },
+    {
+      "modelName": "角色管理",
+      "requestUrl": "/role/add",
+      "cellphone":"19999999999",
+      "operName": "admin",
+      "ipaddr": "175.2.81.212",
+      "operLocation": "湖南省 娄底市",
+      "browser": "Chrome 13",
+      "os": "Windows 10",
+      "createTime": "2025-11-24 11:03:59",
+      "costTime": 2600,
+      "method": "POST"
+    },
+    {
+      "modelName": "系统管理",
+      "requestUrl": "/system/add",
+      "cellphone":"19999999999",
+      "operName": "admin",
+      "ipaddr": "175.2.81.212",
+      "operLocation": "湖南省 娄底市",
+      "browser": "Chrome 13",
+      "os": "Windows 10",
+      "createTime": "2025-11-24 11:03:59",
+      "costTime": 1020,
+      "method": "POST"
+    },
+    {
+      "modelName": "日志管理",
+      "requestUrl": "/log/add",
+      "cellphone":"19999999999",
+      "operName": "admin",
+      "ipaddr": "175.2.81.212",
+      "operLocation": "湖南省 娄底市",
+      "browser": "Chrome 13",
+      "os": "Windows 10",
+      "createTime": "2025-11-24 11:03:59",
+      "costTime": 4000,
+      "method": "POST"
+    }
+  ],
+  "code": 0,
+  "msg": "OK"
+}
