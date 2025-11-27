@@ -233,10 +233,10 @@ function create_menu(list){
 					if(mcs && mcs.length>0){
 						//存在子节点,添加外层标签
 						str+=`
-										<li ya-id="${menu.id}" class="layui-menu-item-group layui-menu-item-up">
-											<div class="layui-menu-body-title">
-												<span><i class="${menu.icon}"></i></span> ${menu.title}<i class="layui-icon layui-icon-up"></i>
-											</div>`
+							<li ya-id="${menu.id}" class="layui-menu-item-group layui-menu-item-up">
+								<div class="layui-menu-body-title">
+									<span><i class="${menu.icon}"></i></span> ${menu.title}<i class="layui-icon layui-icon-up"></i>
+								</div>`
 						str+=`<ul>`
 
 						for (var j = 0; j < mcs.length; j++) {

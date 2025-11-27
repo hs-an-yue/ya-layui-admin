@@ -9,25 +9,48 @@
 
 ---
 
-> 在线预览地址: http://106.14.27.178/
+> 在线预览地址: http://106.14.27.178/   由于没有域名,有些品牌系统浏览器不支持
 ---
 > 模板使用文档在紧急开发中...
 ---
-### 项目概述
+### 一、概述
+> 1. Ya-Layui-Admin由来
 
-Ya-Layui-Admin 是一个基于 [Layui 2.13+](https://layui.dev) 开发的极简风格后台管理模板，旨在帮助后端开发者和前端开发者快速构建现代化的后台管理系统。该模板特别适合对前端技术栈（HTML/CSS/JS）掌握较少但仍需快速搭建管理界面的开发人员。
+当前市面上流行的前端框架基本上都是基于Vue或者React的开发，
+像Vue的开发模板大多数基于Element UI框架，Element UI框架的后台模板五花八门，
+并且学习起来非常复杂。本人是一个后端开发人员，前端开发占比很低，但是也偶尔有一些开发任务，
+由于长时间不开发前端功能，每次在重新进行前端开发的时候都需要用很长时间去看Vue等的知识，
+特别是对模板的熟悉，以及Vue2和Vue3的语法以及生态的学习(vue-cli、pinia、vue-router、vuex、Vite、其它插件...)，
+还有模板对应的依赖，有的项目比较古老还需要来回的调整node环境，非常痛苦，
+为了方便自己后期系统的开发和维护，所以自己实现了一套后台管理模板。
+只需要了解HTML/CSS/JS基础知识就可以开发功能，提高开发效率。
 
-#### 主要特点：
-- **轻量易用**：基于 Layui 构建，无需复杂的构建工具即可快速上手。
-- **模块化结构**：提供多个常用页面模板（如登录、仪表盘、用户管理、日志等）。
-- **丰富的组件**：集成 Layui 提供的丰富 UI 组件，支持表单、表格、图表、弹窗等功能。
+> 2. 学习成本对比
+ 
+```
+HTML/CSS/JS[基础知识](学习成本低) -...-> Layui(学习成本低) -...->  Ya-Layui-Admin(学习成本低)
+
+HTML/CSS/JS[高级功能](学习成本高) -...-> Vue+Vue不同版本的生态(学习成本高) -...-> ElementUI(与脚手架配合学习成本高) -...-> 基于ElementUI的管理模板(学习成本自己体会)
+
+类似于Vue的学习路线太长，不适合我这样前端不专业的后端开发人员。
+```
+
+#### 2. 模板介绍
+Ya-Layui-Admin 是一款基于 [Layui 2.13+](https://layui.dev) 开发的极简后台管理模板。
+
+#### 3.特点
+```
+轻量易用: 基于 Layui 构建，无需复杂的构建工具即可快速上手。
+简单单页: 提供多个常用页面模板（如登录、仪表盘、用户管理、日志等）。
+组件丰富: 集成 Layui 提供的丰富 UI 组件，支持表单、表格、图表、弹窗等功能。
+```
 
 ---
 
-### 安装与使用
+### 二、安装与使用
 
-#### 1. 环境要求
-- 基本 HTML/CSS/JS 知识
+#### 1. 开发要求
+- 了解 HTML/CSS/JS 基础知识
 - 支持主流浏览器（Chrome、Firefox、Edge、Safari）
 
 #### 2. 获取项目
@@ -54,11 +77,21 @@ ya-layui-admin/
 
 #### 4. 运行项目
 
-直接打开 `index.html` 即可查看后台模板的主界面，无需额外的构建步骤。你可以根据需求修改 HTML 文件、CSS 样式或 JavaScript 脚本以适配你的业务场景。
+> 4.1 开发环境
 
+```
+1. 将项目下载到本地
+2. 使用开发工具(HBuilder、VsCode等)导入
+3. 运行 index.html页面或者login.html页面
+``` 
+
+> 4.2 正式环境
+```
+使用nginx或者Apache服务器运行(略)
+```
 ---
 
-### 页面功能概览
+### 三、页面功能概览
 
 | 页面名称        | 功能描述                              |
 |----------------|---------------------------------------|
@@ -74,43 +107,76 @@ ya-layui-admin/
 
 ---
 
-### 技术栈
+### 四、图片展示
 
-- **Layui**：轻量级模块化前端 UI 框架
-- **HTML5 / CSS3 / JavaScript**：基础前端技术
-- **JSON**：用于模拟数据源（`data/*.json`）
-
----
-
-### 图片展示
-
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEBb04955b31818c1398177216ef46f46d8?method=download&shareKey=5da2321d42d05f4c96c9dcf4b702b3f7" alt="abc">
+<table>
+<tr>
+<td style="width: 50%;">
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEBb04955b31818c1398177216ef46f46d8?method=download&shareKey=5da2321d42d05f4c96c9dcf4b702b3f7" alt="abc">    
+</td>
+<td style="width: 50%;">
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEB4ef87394d68abac32ae02446af7180aa?method=download&shareKey=ae5239b8328867ca9f281c3871ca7242" alt="abc">
+</td>
+</tr>
+<tr>
+<td style="width: 50%">
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEBee218855629f06fe87516cbcd5d074c9?method=download&shareKey=503537b4fa44510931ffbcb0ce62f752" alt="abc">
+</td>
+<td style="width: 50%">
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEBf4313bca72a394801efe3a732df88364?method=download&shareKey=fb9dfa24ec628a13b9722e75f79577b4" alt="abc">
+</td>
+</tr>
+<tr>
+<td style="width: 50%">
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEB3f7d87bb5f6ba6507a5843c9107fb32f?method=download&shareKey=1a1c48d19a9f2931fbcccf982ee0d6c1" alt="abc">
+</td>
+<td style="width: 50%">
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEB14cba3b0b15c6cb4686b2e421db0e062?method=download&shareKey=8c080d0d10e018f9a6fd8e8d5836ddac" alt="abc">
+</td>
+</tr>
+<tr>
+<td style="width: 50%">
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEB3f1a032925e496f096a73ce7500e569b?method=download&shareKey=9447f17d20c497d4034e889eb0529156" alt="abc">
+</td>
+<td style="width: 50%">
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEB65dd56be37a9a96c7c72a87c541b5844?method=download&shareKey=975958c7a746a937ec626411d1e1b122" alt="abc">
+</td>
+</tr>
+<tr>
+<td>
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEB3fc831eb4e7f383e2bcca0ded3c56d9e?method=download&shareKey=025b23e6a244a0f05e9361dc699583d8" alt="abc">
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
 
 
 --- 
 
-### 贡献与交流
-
-- **QQ 群**：948233848
-- **开源协议**：MIT License
-- **作者**：夜泊 (ukoko)
-
+### 五、贡献与交流
+```
+QQ群: 948233848
+作者: 夜泊
+邮箱: hd1611756908@163.com
+开源协议: MIT License
+```
 ---
 
-### 许可证
+### 六、许可证
 
 本项目遵循 [MIT License](https://opensource.org/licenses/MIT)，你可以自由使用、修改和分发本项目代码，但必须保留原始版权信息。
 
 ---
 
-### 致谢
+### 七、致谢
 
-感谢 [Layui](https://layui.dev) 提供了优秀的 UI 框架支持，也感谢所有为本项目提供反馈和建议的开发者朋友们。
+感谢 [Layui](https://layui.dev) 提供了优秀的 UI 框架支持
