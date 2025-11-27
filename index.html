@@ -10,22 +10,6 @@
 	</head>
 	<body>
 		<!-- 
-			LayUI的组件封装个人感觉非常简单和方便
-			并且只需要HTML/CSS/JS就可以很容易的使用LayUI，学习成本低
-			但是苦于社区没人为LayUI提供LTS模板，所以打算自己实现一套，以方便工作中使用
-			此模板为PC端模板，没有添加响应式布局(别问，问就是作为后管使用手机浏览器登录的概率很低，如果经常是使用手机浏览器登录，建议开发APP)
-				作者: 夜泊1990
-				邮箱: hd1611756908@163.com
-				博客: https://hs-an-yue.github.io/  https://hd1611756908.github.io/
-				B站: https://space.bilibili.com/514155929
-				协议: MIT协议
-			本人是后端开发，前端开发的时候不是很多，偶尔进行前端开发，现在的前端模板大多是基于Vue，要想使用模板还需要学习Vue那一套东西，
-			对于我这样不经常开发前端的程序员就是灾难，Vue那一套学完长时间不用就忘记了，由于本人比较懒，所以自己实现了一套基于LayUI的后台管理模板，方便我个人使用。
-			开源的目的：方便和我一样的人
-		-->
-		
-		
-		<!-- 
 			首页整体布局 左右两栏布局 左侧为菜单导航 右侧为内容显示
 				1. 左侧为菜单导航: 包括Logo显示和菜单导航 
 				2. 右侧为内容显示: 包括顶部工具条和顶部标签切换和底部内容显示
@@ -54,6 +38,7 @@
 				<div class="ya-sidebar">
 					<div class="ya-sidebar-content">
 						<ul class="layui-menu lay-accordion">
+							<!-- 模板的默认左侧菜单(如果不需要也可以删除,菜单全部由后端生成) -->
 							<li ya-id="999999999" class="layui-menu-item-checked" onclick="add_ya('999999999','仪表盘','views/dashboard.html')">
 								<div class="layui-menu-body-title"><a href="javascript:"><i class="layui-icon layui-icon-bot"></i>  仪表盘</a></div>
 							</li>

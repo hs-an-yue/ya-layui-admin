@@ -101,6 +101,10 @@
 	height: calc(100vh - 48px);
 }
 /* 覆盖layui原菜单的高度 */
+.layui-menu{
+	/* 菜单默认颜色去掉 */
+	background-color: transparent;
+}
 .layui-menu li {
 	line-height: 36px !important;
 }
