@@ -179,4 +179,4 @@ QQ群: 948233848
 
 ### 七、致谢
 
-感谢 [Layui](https://layui.dev) 提供了优秀的 UI 框架支持
+感谢 [Layui](https://layui.dev) 和 [echarts](https://echarts.apache.org/zh/index.html) 提供了优秀的 UI 框架支持
