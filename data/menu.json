@@ -1,105 +1,109 @@
-[
-	{
-		"id":10000,
-		"title":"工作台",
-		"icon":"layui-icon layui-icon-test",
-		"type":2,
-		"url":"views/workbench.html",
-		"level": 1,
-		"parentId":0
-	},
-	{
-		"id":10001,
-		"title":"系统配置",
-		"icon":"layui-icon layui-icon-util",
-		"type":1,
-		"level": 1,
-		"parentId":0,
-		"children":[
-			{
-				"id":10002,
-				"title":"组织架构",
-				"url":"views/organization.html",
-				"type":2,
-				"level": 2,
-				"parentId":10001
-			},
-			{
-				"id":10003,
-				"title":"角色管理",
-				"url":"views/role.html",
-				"type":2,
-				"level": 2,
-				"parentId":10001
-			},
-			{
-				"id":10004,
-				"title":"用户管理",
-				"url":"views/user.html",
-				"type":2,
-				"level": 2,
-				"parentId":10001
-			},
-			{
-				"id":10005,
-				"title":"多级管理",
-				"type":1,
-				"level": 2,
-				"parentId":10001,
-				"children":[
-					{
-						"id":10006,
-						"title":"多级-01",
-						"url":"views/next1.html",
-						"type":2,
-						"level": 3,
-						"parentId":10005
-					},
-					{
-						"id":10007,
-						"title":"多级-02",
-						"url":"views/next2.html",
-						"type":2,
-						"level": 3,
-						"parentId":10005
-					}
-				]
-			}
-		]
-	},
-	{
-		"id":10008,
-		"title":"系统监控",
-		"icon":"layui-icon layui-icon-test",
-		"type":1,
-		"level": 1,
-		"parentId":0,
-		"children":[
-			{
-				"id":10009,
-				"title":"登录日志",
-				"url":"views/user-log.html",
-				"type":2,
-				"level": 2,
-				"parentId":10008
-			},
-			{
-				"id":10011,
-				"title":"应用日志",
-				"url":"views/app-log.html",
-				"type":2,
-				"level": 2,
-				"parentId":10008
-			}
-		]
-	},
-	{
-		"id":10015,
-		"title":"邮件管理",
-		"icon":"layui-icon layui-icon-email",
-		"type":2,
-		"url":"views/email.html",
-		"level": 1,
-		"parentId":0
-	}
-]
+{
+	"code": 0,
+	"msg": "OK",
+	"data": [
+		{
+			"id":10000,
+			"title":"工作台",
+			"icon":"layui-icon layui-icon-test",
+			"type":2,
+			"url":"views/workbench.html",
+			"level": 1,
+			"parentId":0
+		},
+		{
+			"id":10001,
+			"title":"系统配置",
+			"icon":"layui-icon layui-icon-util",
+			"type":1,
+			"level": 1,
+			"parentId":0,
+			"children":[
+				{
+					"id":10002,
+					"title":"组织架构",
+					"url":"views/organization.html",
+					"type":2,
+					"level": 2,
+					"parentId":10001
+				},
+				{
+					"id":10003,
+					"title":"角色管理",
+					"url":"views/role.html",
+					"type":2,
+					"level": 2,
+					"parentId":10001
+				},
+				{
+					"id":10004,
+					"title":"用户管理",
+					"url":"views/user.html",
+					"type":2,
+					"level": 2,
+					"parentId":10001
+				},
+				{
+					"id":10005,
+					"title":"多级管理",
+					"type":1,
+					"level": 2,
+					"parentId":10001,
+					"children":[
+						{
+							"id":10006,
+							"title":"多级-01",
+							"url":"views/next1.html",
+							"type":2,
+							"level": 3,
+							"parentId":10005
+						},
+						{
+							"id":10007,
+							"title":"多级-02",
+							"url":"views/next2.html",
+							"type":2,
+							"level": 3,
+							"parentId":10005
+						}
+					]
+				}
+			]
+		},
+		{
+			"id":10008,
+			"title":"系统监控",
+			"icon":"layui-icon layui-icon-test",
+			"type":1,
+			"level": 1,
+			"parentId":0,
+			"children":[
+				{
+					"id":10009,
+					"title":"登录日志",
+					"url":"views/user-log.html",
+					"type":2,
+					"level": 2,
+					"parentId":10008
+				},
+				{
+					"id":10011,
+					"title":"应用日志",
+					"url":"views/app-log.html",
+					"type":2,
+					"level": 2,
+					"parentId":10008
+				}
+			]
+		},
+		{
+			"id":10015,
+			"title":"邮件管理",
+			"icon":"layui-icon layui-icon-email",
+			"type":2,
+			"url":"views/email.html",
+			"level": 1,
+			"parentId":0
+		}
+	]
+}

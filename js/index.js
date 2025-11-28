@@ -10,9 +10,12 @@ layui.use(function(){
 	dropdown = layui.dropdown;
 	element = layui.element;
 
-	//初始化左侧菜单栏菜单
-	$.getJSON("data/menu.json",function(data){
-		$(".layui-menu").append(create_menu(data));
+	/**
+	 * 菜单数据生成
+	 * 1. 调用后台接口获取菜单数据
+	 */
+	$.getJSON("data/menu.json",function(resp){
+		$(".layui-menu").append(create_menu(resp.data));
 	});
 
 
@@ -38,6 +41,7 @@ layui.use(function(){
 		],
 		body: [
 			{
+				/* 默认页面,如果换新的页面,修改此页面 */
 				content: '<iframe style="border: none;width: 100%;height: 100vh;" src="views/dashboard.html"></iframe>',
 				id:999999999
 			}
