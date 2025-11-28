@@ -1,4 +1,4 @@
-# <div align="center">Ya-Layui-Admin简介</div>
+# <div align="center">Ya-Admin简介</div>
 #### <div align="center"> 基于前端框架Layui2.13开发的一套极简后台管理模板 </div>
 <div align="center">
 	<a href="https://gitee.com/ukoko/ya-layui-admin"><img alt="abc" src="https://img.shields.io/badge/Layui-%3E=2.13.0-blue"></a>
@@ -14,7 +14,7 @@
 > 模板使用文档在紧急开发中...
 ---
 ### 一、概述
-> 1. Ya-Layui-Admin由来
+> 1. Ya-Admin由来
 
 当前市面上流行的前端框架基本上都是基于Vue或者React的开发，
 像Vue的开发模板大多数基于Element UI框架，Element UI框架的后台模板五花八门，
@@ -148,17 +148,6 @@ ya-layui-admin/
 </td>
 </tr>
 </table>
-
-
-
-
-
-
-
-
-
-
-
 
 --- 
 
