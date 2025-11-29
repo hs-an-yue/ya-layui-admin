@@ -9,7 +9,7 @@
 .ya-left{
 	height: 100%;
 	width: 210px;
-	background-color: #fff;
+	background-color: #304156;
 	overflow-y: auto;
 	z-index: 100;
 	transition: width 0.3s ease;
@@ -74,7 +74,7 @@
 /*logo*/
 .ya-left-logo{
 	height: 48px;
-	background-color: #fff;
+	background-color: #2d3748;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
@@ -90,7 +90,7 @@
 	height: 48px;
 	display: flex;
 	align-items: center;
-	color: #16B777;
+	color: #fff;
 	font-size: 18px;
 	font-weight: 600;
 	margin-left: 10px;
@@ -107,6 +107,7 @@
 }
 .layui-menu li {
 	line-height: 36px !important;
+	color: #bfcbd9;
 }
 .layui-tabs-header li{
 	line-height: 35px !important;
@@ -138,14 +139,24 @@
 	border-bottom:none;
 }
 .layui-tabs-header .layui-this, .layui-tabs-header li:hover{
-	color:#16B777;
+	color:#409eff;
 }
 /* 修改选项卡标签伪类样式修改 */
 .layui-tabs-header li .layui-tabs-close:hover{
-	background-color: #16B777;
+	background-color: #409eff;
 	color:#fff;
 }
 /*去掉layui默认菜单选中右侧的竖线*/
 .layui-menu .layui-menu-item-checked:after{
 	border-right: none;
+}
+/* 左侧菜单字体颜色默认值覆盖 */
+.layui-menu-body-title a{
+	color: #bfcbd9;
+}
+.layui-menu .layui-menu-item-up>.layui-menu-body-title{
+	color: #bfcbd9;
+}
+.layui-menu li:after{
+	color:#409eff;
 }
