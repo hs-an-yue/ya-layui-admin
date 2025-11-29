@@ -17,7 +17,7 @@
 https://hs-an-yue.github.io/2025/11/28/Ya-Admin%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/#more
 ```
 
-> 模板氛围两个主题
+> 模板的两个主题
 
 ```
 master分支: 纯白色+绿色
@@ -33,7 +33,7 @@ dark分支: 暗色+蓝色
 
 
 > 2. 学习成本对比
- 
+
 ```
 HTML/CSS/JS[基础知识](学习成本低) -...-> Layui(学习成本低) -...->  Ya-Layui-Admin(学习成本低)
 
