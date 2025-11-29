@@ -17,21 +17,23 @@
 https://hs-an-yue.github.io/2025/11/28/Ya-Admin%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/#more
 ```
 
+> 模板的两个主题
+
+```
+master分支: 纯白色+绿色
+
+dark分支: 暗色+蓝色
+```
+
 ---
 ### 一、概述
 > 1. Ya-Admin由来
 
-当前市面上流行的前端框架基本上都是基于Vue或者React的开发，
-像Vue的开发模板大多数基于Element UI框架，Element UI框架的后台模板五花八门，
-并且学习起来非常复杂。本人是一个后端开发人员，前端开发占比很低，但是也偶尔有一些开发任务，
-由于长时间不开发前端功能，每次在重新进行前端开发的时候都需要用很长时间去看Vue等的知识，
-特别是对模板的熟悉，以及Vue2和Vue3的语法以及生态的学习(vue-cli、pinia、vue-router、vuex、Vite、其它插件...)，
-还有模板对应的依赖，有的项目比较古老还需要来回的调整node环境，非常痛苦，
-为了方便自己后期系统的开发和维护，所以自己实现了一套后台管理模板。
-只需要了解HTML/CSS/JS基础知识就可以开发功能，提高开发效率。
+作者记性不好，长时间不进行开发前端就会忘记Vue2/3以及Vue相关生态链，每次在进行前端开发都很痛苦，所以搞了基于 `LayUI` 的模板，只需要了解<strong>HTML/CSS/JS</strong>就可以开发，简单方便。
+
 
 > 2. 学习成本对比
- 
+
 ```
 HTML/CSS/JS[基础知识](学习成本低) -...-> Layui(学习成本低) -...->  Ya-Layui-Admin(学习成本低)
 
@@ -148,8 +150,11 @@ ya-layui-admin/
 </td>
 </tr>
 <tr>
-<td>
+<td style="width: 50%">
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEB3fc831eb4e7f383e2bcca0ded3c56d9e?method=download&shareKey=025b23e6a244a0f05e9361dc699583d8" alt="abc">
+</td>
+<td style="width: 50%">
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEBa9024da154208311b1bf1ad2387214dc?method=download&shareKey=3a67ed9de7fc11042fda0be1e0a83d0f" alt="abc">
 </td>
 </tr>
 </table>
