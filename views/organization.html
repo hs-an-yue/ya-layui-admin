@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>组织架构</title>
+    <link href="../layui/css/layui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .organization-search-container{
+            height: 60px;
+            background-color: #ffffff;
+        }
+        .organization-search-form>.layui-form-item{
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .organization-search-label{
+            width: 35px;
+            color: #606266;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="layui-fluid">
+        <div class="ya-container">
+            <div class="layui-row organization-search-container">
+                <form class="layui-form organization-search-form">
+                    <div class="layui-form-item">
+                        <div class="layui-inline" style="display: flex;align-items: center;">
+                            <label class="layui-form-label organization-search-label">名称:</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="deptName" placeholder="部门名称" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline" style="display: flex;align-items: center;">
+                            <label class="layui-form-label organization-search-label">状态:</label>
+                            <div class="layui-input-block" style="margin-left: 0;display: flex;align-items: center;">
+                                <select name="interest">
+                                    <option value=""></option>
+                                    <option value="0">启用</option>
+                                    <option value="1">停用</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <button type="button" style="background-color: #16b777;" class="layui-btn">
+                                <i class="layui-icon layui-icon-search"></i>搜索
+                            </button>
+                            <button type="button" class="layui-btn layui-btn-primary">
+                                <i class="layui-icon layui-icon-refresh"></i>重置
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="layui-row" style="margin-top: 15px;background-color: #ffffff;">
+                <table class="layui-hide" id="ID-treeTable-demo"></table>
+            </div>
+        </div>
+    </div>
+    <script src="../layui/layui.js"></script>
+    <script>
+        layui.use(function(){
+            let treeTable = layui.treeTable;
+            //生成表格
+            treeTable.render({
+                elem: '#ID-treeTable-demo',
+                url: '../data/organizationTree.json',
+                cols: [[
+                    {type: 'checkbox', fixed: 'left'},
+                    {field: 'id', title: 'ID',  sort: true, fixed: 'left'},
+                    {field: 'name', title: '部门名称'},
+                    {field: 'score', title: '序号'},
+                    {field: 'status', title: '状态'},
+                    {field: 'description', title: '描述'},
+                    {field: 'createTime', title: '创建时间'},
+                    {
+                        title: "操作",
+                        templet:function (){
+                            let str='<button type="button" class="layui-btn layui-bg-orange layui-btn-xs">更新</button>';
+                            str+='<button type="button" class="layui-btn layui-bg-red layui-btn-xs">删除</button>';
+                            str+='<button type="button" class="layui-btn layui-bg-blue layui-btn-xs">详情</button>';
+                            return str;
+                        }
+                    }
+                ]],
+                page: true
+            });
+        })
+    </script>
+</body>
+</html>

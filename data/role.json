@@ -1,0 +1,31 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 1000,
+  "data": [
+    {
+      "id": 10000,
+      "rolename": "平台管理员",
+      "rolealias": "admin",
+      "status": 1,
+      "mark":"平台管理员",
+      "createTime": "2025-11-11 11:11:11"
+    },
+    {
+      "id": 10001,
+      "rolename": "普通角色",
+      "rolealias": "common",
+      "status": 0,
+      "mark":"普通角色",
+      "createTime": "2025-11-12 11:11:11"
+    },
+    {
+      "id": 10002,
+      "rolename": "运营",
+      "rolealias": "operation",
+      "status": 1,
+      "mark":"运营",
+      "createTime": "2025-11-13 11:11:11"
+    }
+  ]
+}

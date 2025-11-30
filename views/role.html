@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+    <title>模板</title>
+    <link href="../layui/css/layui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/common.css">
+    <style>
+        .organization-search-container{
+            height: 60px;
+            background-color: #ffffff;
+        }
+        .organization-search-form>.layui-form-item{
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: center;
+        }
+        .organization-search-label{
+            width: 35px;
+            color: #606266;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="layui-fluid">
+    <div class="ya-container">
+        <div class="layui-row organization-search-container">
+            <form class="layui-form organization-search-form">
+                <div class="layui-form-item">
+                    <div class="layui-inline" style="display: flex;align-items: center;">
+                        <label class="layui-form-label organization-search-label">名称:</label>
+                        <div class="layui-input-inline">
+                            <input type="text" name="roleName" placeholder="角色名称" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-inline" style="display: flex;align-items: center;">
+                        <label class="layui-form-label organization-search-label">状态:</label>
+                        <div class="layui-input-block" style="margin-left: 0;display: flex;align-items: center;">
+                            <select name="interest">
+                                <option value=""></option>
+                                <option value="0">启用</option>
+                                <option value="1">停用</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-inline">
+                        <button type="button" style="background-color: #16b777;" class="layui-btn">
+                            <i class="layui-icon layui-icon-search"></i>搜索
+                        </button>
+                        <button type="button" class="layui-btn layui-btn-primary">
+                            <i class="layui-icon layui-icon-refresh"></i>重置
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="layui-row" style="margin-top: 15px;background-color: #ffffff;">
+            <table class="layui-hide" id="ID-table-role"></table>
+        </div>
+    </div>
+</div>
+<script src="../layui/layui.js"></script>
+<script>
+    layui.use(function (){
+        let table = layui.table;
+        table.render({
+            elem: '#ID-table-role',
+            url: '../data/role.json',
+            cols: [[
+                {field:'id', title: 'ID', sort: true, fixed: true},
+                {field:'rolename', title: '角色名', },
+                {field:'rolealias', title: '角色别名'},
+                {
+                    title: '状态',
+                    templet:function (data){
+                        return data.status===1?'<span class="layui-badge layui-bg-blue">有效</span>':'<span class="layui-badge layui-bg-orange">无效</span>';
+                    }
+                },
+                {field:'mark', title: '备注'},
+                {field:'createTime', title: '创建时间'},
+                {
+                    title: "操作",
+                    templet:function (){
+                        let str='<button type="button" class="layui-btn layui-bg-orange layui-btn-xs">更新</button>';
+                        str+='<button type="button" class="layui-btn layui-bg-red layui-btn-xs">删除</button>';
+                        return str;
+                    }
+                }
+            ]],
+            page: true
+        });
+    });
+</script>
+</body>
+</html>
