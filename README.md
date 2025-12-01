@@ -14,7 +14,7 @@
 > 模板文档使用地址
 
 ```agsl
-https://hs-an-yue.github.io/2025/11/28/Ya-Admin%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3/#more
+https://hs-an-yue.github.io/  博客中的Ya-Admin使用文档文章
 ```
 
 > 模板的两个主题
@@ -23,6 +23,16 @@ https://hs-an-yue.github.io/2025/11/28/Ya-Admin%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1
 master分支: 纯白色+绿色
 
 dark分支: 暗色+蓝色
+```
+
+> 日志更新
+
+```
+2025-11-24: Ya-Admin v1.0 版本 模板核心框架完成
+2025-11-25: Ya-Admin v1.1 版本 模板案例页面完成
+2025-11-29: Ya-Admin v1.2 版本 提供dark主题模板(dark分支)
+2025-11-30: Ya-Admin完成，文档地址: https://hs-an-yue.github.io/ 下的Ya-Admin使用文档
+2025-12-01: Ya-Admin v1.3 版本 dark分支新增 login-dark.html登录页
 ```
 
 ---
@@ -155,6 +165,11 @@ ya-layui-admin/
 </td>
 <td style="width: 50%">
 <img src="https://share.note.youdao.com/yws/api/personal/file/WEBa9024da154208311b1bf1ad2387214dc?method=download&shareKey=3a67ed9de7fc11042fda0be1e0a83d0f" alt="abc">
+</td>
+</tr>
+<tr>
+<td>
+<img src="https://share.note.youdao.com/yws/api/personal/file/WEB1e529b2cf5f6c09b634dbfb56f2b730d?method=download&shareKey=b3a59d9f2188deffad96fb4aac3a071c" alt="abc">
 </td>
 </tr>
 </table>
