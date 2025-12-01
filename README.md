@@ -114,54 +114,7 @@ ya-layui-admin/
 
 ---
 
-### 四、图片展示
-
-<table>
-<tr>
-<td style="width: 50%;">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB97a4a8911909a5daa66b5f5757dd1d7f?method=download&shareKey=4cb21645ec3198c49130970735e4c619" alt="abc">    
-</td>
-<td style="width: 50%;">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB4ef87394d68abac32ae02446af7180aa?method=download&shareKey=ae5239b8328867ca9f281c3871ca7242" alt="abc">
-</td>
-</tr>
-<tr>
-<td style="width: 50%">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEBee218855629f06fe87516cbcd5d074c9?method=download&shareKey=503537b4fa44510931ffbcb0ce62f752" alt="abc">
-</td>
-<td style="width: 50%">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEBf4313bca72a394801efe3a732df88364?method=download&shareKey=fb9dfa24ec628a13b9722e75f79577b4" alt="abc">
-</td>
-</tr>
-<tr>
-<td style="width: 50%">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB3f7d87bb5f6ba6507a5843c9107fb32f?method=download&shareKey=1a1c48d19a9f2931fbcccf982ee0d6c1" alt="abc">
-</td>
-<td style="width: 50%">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB14cba3b0b15c6cb4686b2e421db0e062?method=download&shareKey=8c080d0d10e018f9a6fd8e8d5836ddac" alt="abc">
-</td>
-</tr>
-<tr>
-<td style="width: 50%">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB3f1a032925e496f096a73ce7500e569b?method=download&shareKey=9447f17d20c497d4034e889eb0529156" alt="abc">
-</td>
-<td style="width: 50%">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB65dd56be37a9a96c7c72a87c541b5844?method=download&shareKey=975958c7a746a937ec626411d1e1b122" alt="abc">
-</td>
-</tr>
-<tr>
-<td style="width: 50%">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEB3fc831eb4e7f383e2bcca0ded3c56d9e?method=download&shareKey=025b23e6a244a0f05e9361dc699583d8" alt="abc">
-</td>
-<td style="width: 50%">
-<img src="https://share.note.youdao.com/yws/api/personal/file/WEBa9024da154208311b1bf1ad2387214dc?method=download&shareKey=3a67ed9de7fc11042fda0be1e0a83d0f" alt="abc">
-</td>
-</tr>
-</table>
-
---- 
-
-### 五、贡献与交流
+### 四、贡献与交流
 ```
 QQ群: 948233848
 作者: 夜泊
@@ -170,12 +123,12 @@ QQ群: 948233848
 ```
 ---
 
-### 六、许可证
+### 五、许可证
 
 本项目遵循 [MIT License](https://opensource.org/licenses/MIT)，你可以自由使用、修改和分发本项目代码，但必须保留原始版权信息。
 
 ---
 
-### 七、致谢
+### 六、致谢
 
 感谢 [Layui](https://layui.dev) 和 [echarts](https://echarts.apache.org/zh/index.html) 提供了优秀的 UI 框架支持
