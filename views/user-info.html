@@ -25,13 +25,7 @@
             justify-content: flex-start;
             align-items: center;
         }
-        .user-info>img{
-            height: 100px;
-            width: 100px;
-            border-radius: 50px;
-            border: 1px solid #eeeeee;
-            margin-top: 20px;
-        }
+
         .user-info>p{
             margin-top: 15px;
         }
@@ -80,6 +74,34 @@
         .layui-tabs-item{
             width: 50%;
         }
+        /*头像*/
+        .avatar-container {
+            text-align: center;
+        }
+        .avatar-wrapper {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid #ddd;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+            margin: 0 auto;
+        }
+        .avatar-wrapper:hover {
+            transform: scale(1.05);
+        }
+        .avatar {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .upload-text {
+            margin-top: 10px;
+            color: #666;
+            font-size: 12px;
+        }
     </style>
 </head>
 <body>
@@ -93,7 +115,12 @@
                     </div>
                     <hr>
                     <div class="user-info-list">
-                        <img src="../img/avatar.gif" alt="avatar">
+                        <div class="avatar-container">
+                            <div class="avatar-wrapper" id="avatar-upload">
+                                <img id="avatarImg" src="../img/avatar.gif" alt="头像" class="avatar">
+                            </div>
+                            <p class="upload-text">点击头像上传新头像</p>
+                        </div>
                         <div class="user-info-detail">
                             <hr>
                             <!--用户账号-->
@@ -270,7 +297,18 @@
 <script>
     layui.use(function(){
         const $ = layui.$;
-        const tabs = layui.tabs;
+        const upload = layui.upload;
+
+        //头像上传
+        upload.render({
+            elem: '#avatar-upload',
+            url: '服务器上传接口地址',
+            done: function(res){
+                //上传成功
+                $("#avatarImg")[0].src='后端返回的图片地址';
+                //失败自己处理
+            }
+        });
 
     });
 </script>
