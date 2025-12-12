@@ -70,12 +70,21 @@ https://hs-an-yue.github.io/  博客中的Ya-Admin使用文档文章
 </tr>
 </table>
 
-## 四、许可证
+## 四、项目目录介绍
 
+```
+ya-layui-admin/
+├── css/                # 自定义 CSS 样式
+├── data/               # 模拟数据文件（JSON）
+├── img/                # 项目图片资源
+├── js/                 # JavaScript 脚本
+├── layui/              # Layui 核心库（CSS 和 JS）
+├── views/              # 各个功能页面模板
+├── index.html          # 首页
+├── login.html          # 登录页面
+└── README.md           # 项目说明文档
+```
+## 五、许可证
 本项目遵循 [MIT License](https://opensource.org/licenses/MIT)，你可以自由使用、修改和分发本项目代码，但必须保留原始版权信息。
-
----
-
-### 五、致谢
-
+## 六、致谢
 感谢 [Layui](https://layui.dev)、[Echarts](https://echarts.apache.org/zh/index.html)、[xm-select](https://xm-select.com/file/xm-select/v1.2.4/#/component/install)等框架支持
