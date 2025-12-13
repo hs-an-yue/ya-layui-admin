@@ -10,8 +10,31 @@
 ---
 
 ## 一、在线预览
+### 第1节 预览地址和在线文档地址
 ```angular2html
 http://106.14.27.178/
+
+当前预览地址已关联后端 用户名/密码: admin/admin
+数据每半个小时重置一次
+
+后端在线API地址: http://106.14.27.178:8080/doc.html  方便大家练习前端模板
+```
+### 第2节 本地部署地址
+```
+代码地址: https://gitee.com/ukoko/yue-an-mini-plus
+
+前后端放在了一个项目中
+后端: Yue-An-mini-Plus
+前端: Yue-An-mini-Plus项目中的ya-layui-admin是前端项目
+
+部署方式
+后端部署: SpringBoot工程，不赘述
+前端部署: 
+    1. 开发工具采用Visual Studio Code(vscode)方便解决跨域问题
+    2. 开发步骤
+        2.1 将前端项目导入到vscode开发工具中
+        2.2 下载Live Server插件作为HTTP服务器
+        2.3 跨域解决方式: 博客 https://hs-an-yue.github.io/ 中的《Live Server代理实现》
 ```
 
 ## 二、Ya-Admin模板介绍文档
