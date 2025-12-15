@@ -40,7 +40,7 @@ http://106.14.27.178/
 ## 二、Ya-Admin模板介绍文档
 
 ```angular17html
-https://hs-an-yue.github.io/  博客中的Ya-Admin使用文档文章
+https://hs-an-yue.github.io/  博客中的《Ya-Admin模板介绍文档》
 ```
 
 ## 三、Ya-Admin图片预览
