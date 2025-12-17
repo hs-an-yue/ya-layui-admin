@@ -243,7 +243,7 @@ function create_menu(list){
 								</div>`
 						str+=`<ul>`
 
-						for (var j = 0; j < mcs.length; j++) {
+						for (let j = 0; j < mcs.length; j++) {
 							let mc =  mcs[j];
 							let mcls = mc.children;
 							if(mcls && mcls.length>0){
