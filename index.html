@@ -95,5 +95,16 @@
 		</div>
 		<script src="layui/layui.js"></script>
 		<script src="js/index.js"></script>
+        <script>
+            layui.use(function (){
+                let $ = layui.$;
+
+                //刷新
+                $(".ya-left-logo").click(function(){
+                    //全局刷新
+                    window.top.location.reload();
+                });
+            });
+        </script>
 	</body>
 </html>
